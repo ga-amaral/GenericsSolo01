@@ -4,7 +4,7 @@ namespace GenericsSolo01
 {
     class PrintService
     {
-        int[] _values = new int[10];
+        object[] _values = new object[10];
         int _count = 0;
         public void AddValue(int value)
         {
@@ -16,7 +16,7 @@ namespace GenericsSolo01
             _count++;
         }
 
-        public int First()
+        public object First()
         {
             if(_count == 0)
             {
