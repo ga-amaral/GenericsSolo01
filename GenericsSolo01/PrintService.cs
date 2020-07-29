@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GenericsSolo01
 {
-    class PrintService
+    class PrintService<T>
     {
-        object[] _values = new object[10];
-        int _count = 0;
-        public void AddValue(int value)
+        private T[] _values = new T[10];
+        private int _count = 0;
+        public void AddValue(T value)
         {
             if (_count == 10)
             {
@@ -16,7 +17,7 @@ namespace GenericsSolo01
             _count++;
         }
 
-        public object First()
+        public T First()
         {
             if(_count == 0)
             {
